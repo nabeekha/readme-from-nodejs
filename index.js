@@ -1,6 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
 
+//importing function from generate markdown
+const genMarkdown = require('./utils/generateMarkdown')
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -8,11 +11,17 @@ const questions = [
         name: 'title',
         message: 'What is the title of the project'
     },
-    //add additional questions in the format above as objects
+    {
+        type: 'input',
+        name: 'repository',
+        message: 'Please enter your GitHub repository link'
+    },
+    {
+        type: 'input',
+        name: '',
+        message: 'What is the title of the project'
+    },
 ];
-
-//importing function from generate markdown
-const genMarkdown = require('./utils/generateMarkdown')
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
