@@ -10,11 +10,20 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
+//https://shields.io/
+//https://choosealicense.com/licenses/
+//https://img.shields.io/badge/license-MIT-red
+
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-
+  
 `;
+//
+
 }
 
 module.exports = generateMarkdown;
+
+//send answers from your index.js to this generateMarkdown function
