@@ -18,9 +18,57 @@ const questions = [
     },
     {
         type: 'input',
-        name: '',
-        message: 'What is the title of the project'
+        name: 'description',
+        message: 'Please provide a description of the application'
     },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Please provide instructions to use your application'
+    },
+    {
+        type: 'checkbox',
+        name: 'contents',
+        message: 'Please check the additional boxes where you would like to enter information',
+        choices: [
+            {
+                name: 'Deployed Application',
+                checked: false
+            },
+            {
+                name: 'Installation',
+                checked: false
+            },
+            {
+                name: 'Screenshots',
+                checked: true
+            },
+            {
+                name: 'Built With',
+                checked: true
+            },
+            {
+                name: 'License',
+                checked: false
+            },
+            {
+                name: 'Contributing',
+                checked: false
+            },
+            {
+                name: 'Tests',
+                checked: false
+            },
+            {
+                name: 'Questions',
+                checked: true
+            },
+            {
+                name: 'Credits',
+                checked: true
+            },
+        ]
+    }
 ];
 
 // TODO: Create a function to write README file
@@ -40,6 +88,10 @@ function init() {
         var testMarkdown = genMarkdown(answers)
         console.log(testMarkdown)
     }
+    .then(newReadme => writeToFile('README.md', newReadme))
+    .catch(err => {
+        console.log(err)
+    })
     )
 }
 
