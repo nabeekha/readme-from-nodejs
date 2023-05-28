@@ -87,12 +87,11 @@ function init() {
         //creating a variable to call the generate markdown function
         var testMarkdown = genMarkdown(answers)
         console.log(testMarkdown)
-    }
+    })
     .then(newReadme => writeToFile('README.md', newReadme))
     .catch(err => {
         console.log(err)
     })
-    )
 }
 
 // Function call to initialize app
