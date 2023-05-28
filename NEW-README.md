@@ -1,13 +1,13 @@
-# test
+# Test Project Readme
 
 ## Description
-test 
+This is a test application 
 
 ## Installation
 undefined
 
 ## Usage
-tet
+To use this, call node index.js
 
 ## Contributing
 undefined
