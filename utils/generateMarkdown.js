@@ -1,14 +1,14 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  const license = data.license[0]
-  let string = ""
-  if (license === "MIT" ) {
-    string = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
-  }
+// function renderLicenseBadge(data) {
+//   const licenseType = data.license[0]
+//   let string = ""
+//   if (licenseType === "MIT" ) {
+//     string = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
+//   }
 
-  return string
-}
+//   return string
+// }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -43,7 +43,7 @@ ${data.contributing}
 ${data.tests}
 
 ## License
-${renderLicenseBadge(data)}
+
 
 ## GitHub
 ${data.github}

@@ -22,5 +22,3 @@ No contributions to this specific repository are needed at this time. Please fee
 
 
 [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
-
- 

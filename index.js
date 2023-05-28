@@ -1,8 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
+const fs = require('fs')
+const path = require('path')
 
 //importing function from generate markdown
-const genMarkdown = require('./utils/generateMarkdown')
+const generateMarkdown = require('./utils/generateMarkdown')
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -44,6 +46,10 @@ const questions = [
                 checked: true
             },
             {
+                name: 'MIT License',
+                checked: true
+            },
+            {
                 name: 'Built With',
                 checked: true
             },
@@ -82,15 +88,8 @@ function init() {
 
     //inquirer questions using prompt
     inquirer.prompt(questions)
-    .then((answers) => {
-        console.log(answers.title)
-        //creating a variable to call the generate markdown function
-        var testMarkdown = genMarkdown(answers)
-        console.log(testMarkdown)
-    })
-    .then(newReadme => writeToFile('README.md', newReadme))
-    .catch(err => {
-        console.log(err)
+    .then((response) => {
+        return fs.writeFileSync(path.join(process.cwd(), "NEW-README.md"), generateMarkdown(response));
     })
 }
 
